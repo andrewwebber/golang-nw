@@ -36,7 +36,7 @@ func New(version string, nwOs string, nwArch string) Pkg {
 		panic(fmt.Errorf("Unsupported arch %q", nwArch))
 	}
 
-	url := fmt.Sprintf("http://dl.node-webkit.org/%s/node-webkit-%s-%s-%s%s", version, version, pkgOs.os, arch, pkgOs.ext)
+	url := fmt.Sprintf("http://dl.node-webkit.org/v%s/node-webkit-v%s-%s-%s%s", version, version, pkgOs.os, arch, pkgOs.ext)
 
 	pkg := Pkg{
 		Url:          url,
@@ -211,7 +211,7 @@ type pkgOs struct {
 var windows = pkgOs{
 	os:   "win",
 	bin:  "nw.exe",
-	deps: []string{"ffmpegsumo.dll", "icudt.dll", "libEGL.dll", "libGLESv2.dll", "nw.pak"},
+	deps: []string{"ffmpegsumo.dll", "icudtl.dat", "libEGL.dll", "libGLESv2.dll", "nw.pak"},
 	ext:  ".zip",
 }
 

@@ -3,7 +3,7 @@ package build
 import (
 	"archive/zip"
 	"encoding/json"
-	"github.com/lonnc/golang-nw"
+	"github.com/andrewwebber/golang-nw"
 	"io"
 	"io/ioutil"
 	"os"
